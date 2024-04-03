@@ -1,0 +1,30 @@
+
+```java
+public class Main {
+  public static void main(String[] args) {
+    String studentName = "Anna";
+    int yearOfSchool = 12;
+    double studentAge = 18;
+    double grade = 7;
+    boolean olympicsWinner = true;
+
+    boolean isAgeEligible = studentAge >= 18;
+    boolean isGradeEligible = grade >= 8;
+
+    if (isAgeEligible && (isGradeEligible || olympicsWinner)) {
+      System.out.println("You are accepted!");
+    } else {
+      System.out.println("You are not accepted. Reasons:");
+
+      if (!isAgeEligible) {
+        System.out.println("- You are not eligible due to age.");
+      }
+      if (isAgeEligible && (!isGradeEligible || olympicsWinner)) { 
+        System.out.println("- You are not eligible due to insufficient grade.");
+      }
+  
+    }
+  }
+}
+```
+
